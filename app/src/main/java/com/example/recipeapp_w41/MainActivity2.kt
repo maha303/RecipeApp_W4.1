@@ -2,7 +2,6 @@ package com.example.recipeapp_w41
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +21,7 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         rcAdapter=findViewById(R.id.rvMain)
-        rcAdapter.adapter=RVAdapter(items)
+        rcAdapter.adapter=RVAdapter(this.items)
         rcAdapter.layoutManager=LinearLayoutManager(this)
 
         getRecipes()
@@ -52,4 +51,6 @@ class MainActivity2 : AppCompatActivity() {
 
             })
         }
-    }
+
+
+}
